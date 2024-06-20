@@ -6,9 +6,14 @@ spring:
     port: 5672
     username: guest
     password: guest
-    queue:
+    string-queue:
       name: my-queue
+    json-queue:
+      name: json-queue
     exchange:
       name: my-exchange
     routing-key:
-      name: my-routing-key
+      string:
+        name: my-routing-key
+      json:
+        name: json-routing-key

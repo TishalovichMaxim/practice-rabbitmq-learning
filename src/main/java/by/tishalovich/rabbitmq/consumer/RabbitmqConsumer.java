@@ -11,7 +11,7 @@ public class RabbitmqConsumer {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RabbitmqConsumer.class);
 
-    @RabbitListener(queues = {"${spring.rabbitmq.queue.name}"})
+    @RabbitListener(queues = {"${spring.rabbitmq.string-queue.name}"})
     public void consume(Message<String> message) {
         LOGGER.info(String.format("Consumed message: %s", message.getPayload()));
     }

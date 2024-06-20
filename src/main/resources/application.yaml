@@ -1,3 +1,14 @@
 spring:
   application:
     name: rabbitmq
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    queue:
+      name: my-queue
+    exchange:
+      name: my-exchange
+    routing-key:
+      name: my-routing-key
